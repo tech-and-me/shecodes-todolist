@@ -1,12 +1,9 @@
 import React from "react";
 
 function TodoItem(props){
-    const { todo,by } = props;
+    const { todo } = props;
     console.log(props);
-    return (<div>
-        <p>{todo}</p>
-        <p>By: {by}</p>
-        </div>)
+    return (<div>{todo}</div>)
 }
 
 export default TodoItem;
