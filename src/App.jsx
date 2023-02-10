@@ -1,8 +1,8 @@
 import "./App.css";
 import React from "react";
 import { useState } from "react";
-import TodoForm from "./components/TodoForm";
-import TodoItem from './components/TodoItem';
+import TodoForm from "./components/TodoForm/TodoForm";
+import TodoItem from './components/TodoItem/TodoItem';
 
 
 function App(){
@@ -21,15 +21,16 @@ function App(){
 
   return (
     <div className="app">
-      <div className="todo-list">My todo list</div>
+      <div className="todo-list">
+      <h1 >My todo list</h1>
       {
         todos.map((todo,index) => {
           let name = "Phary"
           return (
-            <div>
+      
               <TodoItem todo={todo} key={index} />
-              <p>==={name}===</p>
-            </div>
+              // {/* <p>==={name}===</p> */}
+  
           )
           
         }
@@ -37,6 +38,7 @@ function App(){
         )
       }
       <TodoForm addTodo={addTodo}/>
+    </div>
     </div>
   )
 }
